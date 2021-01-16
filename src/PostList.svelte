@@ -3,8 +3,8 @@
     import Post from "./Post.svelte";
 
     const postsUrl = process.env.isProd
-  ? "http://localhost:1337/posts"
-  : "https://no-blockers.herokuapp.com/posts";
+    ? "https://no-blockers.herokuapp.com/posts"
+  : "http://localhost:1337/posts"
 
     let posts = [];
     let error = null
