@@ -16,7 +16,7 @@
           throw resp;
         });
       };
-    
+      console.log("logging env", postsUrl)
         try {
             const res = await fetch(postsUrl, {
               method: "GET",
