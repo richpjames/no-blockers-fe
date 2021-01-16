@@ -1,5 +1,5 @@
 <script>
-    import {postsUrl} from "./constants"
+    import { postsUrl } from "./constants"
     import { onMount } from 'svelte';
     import Post from "./Post.svelte";
     
