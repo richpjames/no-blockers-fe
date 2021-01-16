@@ -1,4 +1,5 @@
 <script>
+    import {postsUrl} from "./constants"
     import { onMount } from 'svelte';
     import Post from "./Post.svelte";
     
@@ -17,7 +18,7 @@
       };
     
         try {
-            const res = await fetch("http://localhost:1337/posts", {
+            const res = await fetch(postsUrl, {
               method: "GET",
               headers: {
                  'Content-Type': 'application/json'
