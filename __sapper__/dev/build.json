@@ -1,11 +1,9 @@
 {
   "bundler": "rollup",
-  "shimport": "2.0.4",
-  "assets": {
-    "main": null
-  },
+  "shimport": "1.0.1",
+  "assets": {},
   "css": {
-    "main": []
-  },
-  "dependencies": {}
+    "main": "main.2485255419.css",
+    "chunks": {}
+  }
 }
