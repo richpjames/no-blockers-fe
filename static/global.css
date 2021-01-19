@@ -163,7 +163,7 @@ td {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   max-width: 42em;
   width: 100%;
 }
