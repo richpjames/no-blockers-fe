@@ -61,7 +61,7 @@
 </svelte:head>
 
 <header>
-  <p>{post.printDate} ~ {post.printReadingTime}</p>
+  <h4>{post.printDate} ~ {post.printReadingTime}</h4>
   <h1>{post.title}</h1>
 </header>
 <div class="container">
@@ -69,7 +69,6 @@
     {@html post.html}
   </article>
   <hr />
-  <Bio />
 </div>
 
 <style>
@@ -78,10 +77,9 @@
     margin-bottom: 0.7em;
   }
 
-  header p {
+  header h4 {
     color: #AAA;
     text-transform: uppercase;
-    font-family: Rubik, sans-serif;
     font-weight: 600;
   }
 
