@@ -7,7 +7,7 @@
 <div class="layout">
   <Header {segment}/>
 
-  <main>
+  <main style="--main: #fd6378">
     <slot></slot>
   </main>
 
@@ -35,6 +35,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   footer {
