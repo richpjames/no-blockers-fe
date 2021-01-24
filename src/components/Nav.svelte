@@ -7,10 +7,11 @@
     align-items: flex-end;
     display: flex;
     flex: 1;
-    font-family: Rubik, sans-serif;
+    font-family: Work Sans, sans-serif;
     font-weight: 700;
     justify-content: flex-end;
-    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-size: 1.5rem;
   }
 
   a {
@@ -44,7 +45,7 @@
   }
 
   .selected::before {
-    background: #fd6378;
+    background: var(--main);
   }
 </style>
 
