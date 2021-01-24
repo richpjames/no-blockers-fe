@@ -61,18 +61,19 @@
 </svelte:head>
 
 <header>
-  <h4>{post.printDate} ~ {post.printReadingTime}</h4>
+  <h4>{post.printDate} {post.type === "writing" ? `~ ${post.printReadingTime}` : ""}</h4>
   <h1>{post.title}</h1>
 </header>
 <div class="container">
-  <article class="content">
     {@html post.html}
-  </article>
   <hr />
 </div>
 
 <style>
 
+  header {
+    width: 100%;
+  }
   header h1 {
     margin-bottom: 0.7em;
   }
