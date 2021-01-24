@@ -1,3 +1,8 @@
+:root{
+  --main: #fd6378;
+  --h1-big: 3rem;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -19,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: Work Sans, serif;
-  font-size: 3em;
+  font-size: var(--h1-big);
   margin: 0 0 1em 0;
   letter-spacing: -.3rem;
 }
@@ -27,6 +32,9 @@ h1 {
 h2 {
   margin: 1.6em 0 0 0;
   font-size: 1.8em;
+  letter-spacing: -.2rem;
+  font-weight: 600;
+  
 }
 
 h3 {
@@ -74,18 +82,18 @@ a {
 }
 
 a:hover {
-  color: #fd6378;
+  color: var(--main);
 }
 
 p a {
   text-decoration: none;
-  box-shadow: inset 0 -0.12em 0 #fd6378;
+  box-shadow: inset 0 -0.12em 0 var(--main);
   -webkit-transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
   transition: box-shadow .2s ease-in-out, color .2s ease-in-out;
 }
 
 p a:hover {
-  box-shadow: inset 0 -1.5em 0 #fd6378;
+  box-shadow: inset 0 -1.5em 0 var(--main);
   color: #FFF;
 }
 
@@ -167,18 +175,18 @@ td {
 
 .container {
   margin: 0;
-  max-width: 42em;
+  max-width: 100vw;
   width: 100%;
 }
 
 .content h1 {
-  font-size: 3em;
+  font-size: var(--h1-big);
   margin: 1em 0;
 }
 
 @media (max-width: 1020px) {
   h1 {
-    font-size: 3em;
+    font-size: var(--h1-big);
   }
 
   .content h1 {
