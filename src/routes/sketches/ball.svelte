@@ -1,29 +1,44 @@
 <script>
-  let layer1Padding = "5rem"
+  import { fade } from 'svelte/transition';
 
-
+  let y
+  let layers = ["1", "2", "3", "5", "4", "6", "7"]
 </script>
-<div class="container">
-  <div class="circle"></div>  
-  <div class="layer-one">
+
+<svelte:window bind:scrollY={y}/>
+
+<div class="container" transition:fade>
+  <div class="circle" style="transform: translateY({y * 2}px);"></div>
+  {#each layers as layer, i}
+  <div class="layer-one" style={`margin-top: ${i === 0 ? "5rem" : "0"}`}>
     <div class="part-one cyan"></div>
-    <div class="pad"></div>
-    <div class="part-two cyan"></div>
-</div>
-  <div class="layer-two">    
-    <div class="part-one brown"></div>
-    <div class="pad"></div>
-    <div class="part-two brown l2p2"></div>
+    <div class="part-two cyan" style="margin-left: {y / 20 + 9 / (i + 1)}%"></div>
   </div>
-  <div class="layer-three"></div>
-  <div class="layer-four"></div>
-  <div class="layer-five"></div>
+  <div class="layer">    
+    <div class="part-one brown"></div>
+    <div class="part-two brown" style="margin-left: {y / 20 + 8 / (i + 1)}%"></div>
+  </div>
+  <div class="layer">    
+    <div class="part-one peach"></div>
+    <div class="part-two peach" style="margin-left: {y / 20 + 7 / (i + 1)}%"></div>
+  </div>
+  <div class="layer">    
+    <div class="part-one greyn"></div>
+    <div class="part-two greyn" style="margin-left: {y / 20  + 6 / (i + 1)}%"></div>
+  </div>
+  <div class="layer">    
+    <div class="part-one deepskyblue"></div>
+    <div class="part-two deepskyblue" style="margin-left: {y / 20 + 6 / (i + 1)}%"></div>
+  </div>
+  {/each}
+  
 </div>
 
 <style>
+
  .container {
   width: 100%;
-  height: 20rem;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,46 +57,35 @@
 .brown {
     background-color: #ec4e20;
 }
-.pad{
-  width: 10rem;
+.peach{
+  background-color: #ff9505;
 }
-.pad-small{
-  width: 5rem;
+.greyn{
+  background-color: #00a6a6;
+}
+
+.deepskyblue{
+  background-color: deepskyblue;
 }
 .layer-one {
   height: 3.5rem;
-  margin-top: 5rem;
   display: flex;
   width: 100%;
 }
 .part-one {
-  width: 45%;
+  width: 100%;
   border-top-right-radius: 5rem;
   }
 .part-two {
-  width: 45%;
+  width: 100%;
   border-top-left-radius: 5rem;
   margin-left: auto;
 }
-.layer-two {
+.layer{
   height: 3.5rem;
   display: flex;
   width: 100%;
 }
 
-.layer-three {
-  width: 100%;
-  height: 3.5rem;
-  background-color: #ff9505;
-}
-.layer-four {
-  width: 100%;
-  height: 3.5rem;
-  background-color: #00a6a6;
-}
-.layer-five {
-  width: 100%;
-  height: 3.5rem;
-  background-color: deepskyblue;
-}
+
 </style>

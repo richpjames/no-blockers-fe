@@ -28,9 +28,9 @@
     flex: 1;
     position: relative;
     margin: 0 auto;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     background-color: white;
-    padding: 1em 2em;
+    padding-top: 1em;
     box-sizing: border-box;
     width: 100%;
     display: flex;
