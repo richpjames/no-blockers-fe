@@ -26,7 +26,6 @@
 		<slot></slot>
 	{:else}
 		<div class="wrapper">
-			this is the wrapper
 			<slot></slot>
 		</div>
 	{/if}
