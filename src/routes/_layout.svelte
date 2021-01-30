@@ -7,16 +7,27 @@
 <style>
 	main {
 		position: relative;
-		max-width: 56em;
+		max-width: 100vw;
+		padding: 2rem 0;
 		background-color: white;
-		padding: 2em;
 		margin: 0 auto;
 		box-sizing: border-box;
+	}
+	.wrapper {
+		max-width: 56em;
+		padding: 2em;
 	}
 </style>
 
 <Nav {segment}/>
 
 <main>
-	<slot></slot>
+	{#if segment === "sketches"}
+		<slot></slot>
+	{:else}
+		<div class="wrapper">
+			this is the wrapper
+			<slot></slot>
+		</div>
+	{/if}
 </main>

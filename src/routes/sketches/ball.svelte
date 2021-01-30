@@ -3,7 +3,6 @@
 
   let y
   let layers = ["1", "2", "3", "5", "4", "6", "7"]
-  export let ball;
 </script>
 
 <svelte:window bind:scrollY={y}/>
