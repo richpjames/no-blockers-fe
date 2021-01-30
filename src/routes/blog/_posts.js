@@ -7,24 +7,24 @@
 // we don't want to create an `/blog/posts` route — the leading
 // underscore tells Sapper not to do that.
 
-const fs = require('fs');
-const frontMatter = require('front-matter');
-const marked = require('marked');
+const fs = require("fs");
+const frontMatter = require("front-matter");
+const marked = require("marked");
 
-const posts = fs.readdirSync('./src/posts').map(postFilename => {
+const posts = fs.readdirSync("./src/posts").map((postFilename) => {
   const postContent = fs.readFileSync(`./src/posts/${postFilename}`, {
-    encoding: 'utf8'
+    encoding: "utf8",
   });
   const postFrontMatter = frontMatter(postContent);
   return {
     title: postFrontMatter.attributes.title,
     slug: postFrontMatter.attributes.slug,
-    html: marked(postFrontMatter.body)
-  }
+    html: marked(postFrontMatter.body),
+  };
 });
 
-posts.forEach(post => {
-	post.html = post.html.replace(/^\t{3}/gm, '');
+posts.forEach((post) => {
+  post.html = post.html.replace(/^\t{3}/gm, "");
 });
 
 export default posts;

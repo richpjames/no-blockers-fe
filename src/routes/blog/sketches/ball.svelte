@@ -1,11 +1,16 @@
-<script>
+<script >
   import { fade } from 'svelte/transition';
 
   let y
   let layers = ["1", "2", "3", "5", "4", "6", "7"]
+  export let ball;
 </script>
 
 <svelte:window bind:scrollY={y}/>
+
+<svelte:head>
+	<title>Ball</title>
+</svelte:head>
 
 <div class="container" transition:fade>
   <div class="circle" style="transform: translateY({y * 2}px);"></div>
@@ -31,7 +36,7 @@
     <div class="part-two deepskyblue" style="margin-left: {y / 20 + 6 / (i + 1)}%"></div>
   </div>
   {/each}
-  
+  bingo
 </div>
 
 <style>

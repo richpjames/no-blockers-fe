@@ -32,3 +32,6 @@
 		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
 	{/each}
 </ul>
+<ul>
+	
+</ul>
