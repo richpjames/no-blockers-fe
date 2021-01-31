@@ -16,9 +16,12 @@ const posts = fs.readdirSync("./src/posts").map((postFilename) => {
     encoding: "utf8",
   });
   const postFrontMatter = frontMatter(postContent);
+  const date = new Date(postFrontMatter.attributes.date);
   return {
     title: postFrontMatter.attributes.title,
     slug: postFrontMatter.attributes.slug,
+    excerpt: postFrontMatter.attributes.excerpt,
+    date: date,
     html: marked(postFrontMatter.body),
   };
 });
@@ -26,5 +29,7 @@ const posts = fs.readdirSync("./src/posts").map((postFilename) => {
 posts.forEach((post) => {
   post.html = post.html.replace(/^\t{3}/gm, "");
 });
+
+posts.sort((a, b) => b.date - a.date);
 
 export default posts;

@@ -1,61 +1,62 @@
 <script>
+  import { fly } from "svelte/transition";
 
-	export let segment;
+  export let segment;
+  const links = ["sketches", "blog", "about"];
 </script>
 
-<style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
-</style>
-
 <nav>
-	<ul>
-		<li><a aria-current='{segment === undefined ? "page" : undefined}' href='.'>home</a></li>
-		<li><a aria-current='{segment === "sketches" ? "page" : undefined}' href='sketches'>sketches</a></li>
-		<li><a aria-current='{segment === "about" ? "page" : undefined}' href='about'>about</a></li>
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current='{segment === "blog" ? "page" : undefined}' href='blog'>blog</a></li>
-	</ul>
+  <ul>
+    {#each links as link}
+      <li role="navigation" aria-label={link}> 
+        <a aria-current={segment === link ? "page" : undefined} href={link}>
+          {link}
+        </a>
+        {#if segment === link}
+          <div transition:fly class="highlight-block" />
+        {/if}
+      </li>
+    {/each}
+  </ul>
 </nav>
+
+<style>
+  nav {
+    font-weight: 600;
+    padding: 0 1em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  li {
+    display: block;
+    font-size: 1.2rem;
+    padding: 1em 0.5em;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  [aria-current] {
+    position: relative;
+    display: inline-block;
+    opacity: 0.9;
+  }
+
+  .highlight-block {
+    position: relative;
+  }
+  .highlight-block::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 15px;
+    background-color: deepskyblue;
+    display: block;
+  }
+</style>

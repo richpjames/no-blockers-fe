@@ -12,7 +12,6 @@
 </svelte:head>
 
 <div class="container" transition:fade>
-  <div class="circle" style="transform: translateY({y * 2}px);"></div>
   {#each layers as layer, i}
   <div class="layer-one" style={`margin-top: ${i === 0 ? "5rem" : "0"}`}>
     <div class="part-one cyan"></div>
@@ -35,14 +34,15 @@
     <div class="part-two deepskyblue" style="margin-left: {y / 20 + 6 / (i + 1)}%"></div>
   </div>
   {/each}
-  bingo
+    <div class="circle" style="transform: translateY({y * 2}px);"></div>
+  <div class="layer dark-brown" />
 </div>
 
 <style>
 
  .container {
   width: 100%;
-  height: 200vh;
+  height: 100rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +60,9 @@
 }
 .brown {
     background-color: #ec4e20;
+}
+.dark-brown{
+  background-color:#83270b ;
 }
 .peach{
   background-color: #ff9505;

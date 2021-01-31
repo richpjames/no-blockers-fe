@@ -1,34 +1,31 @@
 <script>
+  import ListWrapper from "../../components/ListWrapper.svelte";
+  import PageWrapper from "../../components/PageWrapper.svelte";
+
   const sketches = [{ name: "ball", imagePath: "ball.jpg" }];
 </script>
 
-<div class="sketches-wrapper">
+<svelte:head>
+  <title>rich james' sketches</title>
+</svelte:head>
+
+<div>
   <h1>sketches</h1>
-  
+
   <p>these are ideas i'm using to improve my css and have fun</p>
 
-  <section>
-    <ul>
-      {#each sketches as { name, imagePath }}
-      <hr/>
-        <li>
-          <a href="sketches/ball"><h3>{name}</h3></a>
-          <img src={`./sketch_thumbs/${imagePath}`} alt={`${name} thumbnail`} />
-        </li>
-      {/each}
-    </ul>
-  </section>
+  <ListWrapper>
+    {#each sketches as { name, imagePath }}
+      <hr />
+      <li>
+        <a href="sketches/ball"><h3>{name}</h3></a>
+        <img src={`./sketch_thumbs/${imagePath}`} alt={`${name} thumbnail`} />
+      </li>
+    {/each}
+  </ListWrapper>
 </div>
 
 <style>
-  .sketches-wrapper {
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items:center;
-    /* text-align: center; */
-  }
   img {
     width: min(600px, 95%);
   }
@@ -37,10 +34,17 @@
     flex-direction: column;
     align-items: center;
     padding-top: 1rem;
-
   }
-  p{
-    margin:0;
+  p {
+    margin: 0;
+    max-width: 56em;
+    padding: min(30%, 2rem);
   }
-
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: min(30%, 2rem);
+  }
 </style>

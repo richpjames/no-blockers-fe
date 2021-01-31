@@ -1,32 +1,39 @@
 <script>
-	import Nav from '../components/Nav.svelte';
+  import Nav from "../components/Nav.svelte";
 
-	export let segment;
+  export let segment;
 </script>
 
-<style>
-	main {
-		position: relative;
-		max-width: 100vw;
-		padding: 2rem 0;
-		background-color: white;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-	.wrapper {
-		max-width: 56em;
-		padding: 2em;
-	}
-</style>
-
-<Nav {segment}/>
+<Nav {segment} />
 
 <main>
-	{#if segment === "sketches"}
-		<slot></slot>
-	{:else}
-		<div class="wrapper">
-			<slot></slot>
-		</div>
-	{/if}
+  {#if segment === "sketches"}
+    <slot />
+  {:else}
+    <div class="wrapper">
+      <slot />
+    </div>
+  {/if}
 </main>
+
+<style>
+  main {
+    position: relative;
+    max-width: 100vw;
+    background-color: white;
+    padding-top: min(30%, 2rem);
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper {
+    max-width: 100vw;
+    padding: min(30%, 2rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
