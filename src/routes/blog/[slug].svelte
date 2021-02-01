@@ -18,7 +18,7 @@
 
 </script>
 <svelte:head>
-  <title>{post.title}</title>
+  <title>rj blog: {post.title}</title>
 <!--  Include canonical links to your blog -->
 <!--   <link rel="canonical" href="" /> -->
   
@@ -90,9 +90,7 @@
 		margin: 0 0 0.5em 0;
 	}
 
-	article :global(li) {
-		margin: 0 0 0.5em 0;
-	}
+
 </style>
 
 <article>

@@ -2,7 +2,7 @@
   import { fly } from "svelte/transition";
 
   export let segment;
-  const links = ["sketches", "blog", "about"];
+  const links = ["sketches", "blog", "photos", "about",];
 </script>
 
 <nav>

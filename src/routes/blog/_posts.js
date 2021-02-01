@@ -11,10 +11,13 @@ const fs = require("fs");
 const frontMatter = require("front-matter");
 const marked = require("marked");
 
-const posts = fs.readdirSync("./src/posts").map((postFilename) => {
-  const postContent = fs.readFileSync(`./src/posts/${postFilename}`, {
-    encoding: "utf8",
-  });
+const posts = fs.readdirSync("./src/routes/blog/posts").map((postFilename) => {
+  const postContent = fs.readFileSync(
+    `./src/routes/blog/posts/${postFilename}`,
+    {
+      encoding: "utf8",
+    }
+  );
   const postFrontMatter = frontMatter(postContent);
   const date = new Date(postFrontMatter.attributes.date);
   return {
