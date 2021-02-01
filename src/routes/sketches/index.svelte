@@ -39,6 +39,7 @@
     margin: 0;
     max-width: 56em;
     padding: min(30%, 2rem);
+    font-size: 26px;
   }
   div {
     display: flex;
