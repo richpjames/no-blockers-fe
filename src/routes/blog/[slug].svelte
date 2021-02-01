@@ -61,11 +61,12 @@
 
 <style>
 	article{
-		max-width: calc(100vw - 2rem);
+		width: min(90%, 50em);
 	}
 	article :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
+		text-align: center;
+		padding-bottom: 2rem;
+
 	}
 
 	article :global(pre) {
@@ -88,9 +89,11 @@
 	article :global(li) {
 		margin: 0 0 0.5em 0;
 	}
-</style>
 
-<h1>{post.title}</h1>
+	article :global(li) {
+		margin: 0 0 0.5em 0;
+	}
+</style>
 
 <article>
 	{@html post.html}
