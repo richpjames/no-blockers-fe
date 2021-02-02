@@ -4,9 +4,12 @@ date: 2021-02-1T12:51:00.000Z
 slug: monitor-1
 excerpt: monitor is a publication platform for poetry, innovative writing and criticism based in manchester, uk. in this post i detail how i made the first two versions of their site
 ---
+
 ## monitor
 
-*This is part 1 in a 2 parter on how I built a website for monitor - a publication platform for poetry, innovative writing and criticism based in manchester, uk. This post details how I made the original version the website up to the point where we started selling our first product. To read the second part about how I added more products and basket functionality [click here](./blog/monitor-books-2).*
+_This is part 1 in a 2 parter on how I built a website for Monitor - a publication platform for poetry, innovative writing and criticism based in Manchester. This post details how I made the original version the website up to the point where we started selling our first product. To read the second part about how I added more products and basket functionality [click here](./blog/monitor-books-2)._
+
+---
 
 When learning to code to begin with I found it difficult to stay motivated making sites or apps just for the sake of learning a new skill. I found what really motivated me was trying to solve real world problems and have a site live with real users really using it.
 
@@ -46,6 +49,8 @@ Without too much pain I had managed to rebuild the site and improve on what we a
 Now I understand using React to build a site as small of this is perhaps overkill but I wanted to learn how to use React better and so a small scale project like this was ideal. I managed to get my first developer job about a month after graduating from Northcoders so the time that I had to build the website dramatically decreased but what we had was good enough - it was selling books!
 
 ### monitor 1.1
+
+![a screenshot of the monitor site in early 2020](./article_photos/monitor-v1.jpg)
 
 A few months later Rory told me that he'd made a video for Monitor and was hoping to put them live on the site - this was a simple update. I just needed to add another page for the video and ensure people could navigate to it. My most treasured learning from this part of the project was iframes and how interesting/frustrating styling them could be. The video was hosted on Vimeo and the embed link for that was an iframe that, for a while, I bumbled about with like a child failing to make a dog out of a balloon before reaching a point that both Rory and I were satisfied with the dimensions of the video.
 

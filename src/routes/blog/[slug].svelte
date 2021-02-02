@@ -66,6 +66,10 @@
 <style>
   article {
     width: min(90%, 50em);
+    margin-bottom: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   article :global(h2) {
