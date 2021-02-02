@@ -37,11 +37,6 @@
 </PageWrapper>
 
 <style>
-  
-  h1{
-    margin: 0;
-    padding-bottom: 2rem;
-  }
   h3 {
     color: #333;
   }
