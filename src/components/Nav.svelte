@@ -2,13 +2,13 @@
   import { fly } from "svelte/transition";
 
   export let segment;
-  const links = ["sketches", "blog", "photos", "about",];
+  const links = ["sketches", "blog", "photos", "about"];
 </script>
 
 <nav>
   <ul>
     {#each links as link}
-      <li role="navigation" aria-label={link}> 
+      <li role="navigation" aria-label={link}>
         <a aria-current={segment === link ? "page" : undefined} href={link}>
           {link}
         </a>
@@ -24,6 +24,14 @@
   nav {
     font-weight: 600;
     padding: 0 1em;
+  }
+  @media screen and (max-width: 400px) {
+    nav {
+      padding: 0px;
+    }
+    li {
+      padding: .5em 0.25em;
+    }
   }
 
   ul {
