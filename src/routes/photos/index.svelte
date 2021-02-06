@@ -4,18 +4,22 @@
 
 <h1>photos</h1>
 
-{#each photos as { path, alt, orientation, location }}
-  <figure
-    class={`container-${orientation === "portrait" ? "portrait" : "landscape"}`}
-  >
-    <img
-      src={`${imageUrl}/${path}`}
-      {alt}
-      class={orientation === "portrait" ? "portrait" : "landscape"}
-    />
-    <figcaption>{location}</figcaption>
-  </figure>
-{/each}
+<section>
+  {#each photos as { path, alt, orientation, location }}
+    <figure
+      class={`container-${
+        orientation === "portrait" ? "portrait" : "landscape"
+      }`}
+    >
+      <img
+        src={`${imageUrl}/${path}`}
+        {alt}
+        class={orientation === "portrait" ? "portrait" : "landscape"}
+      />
+      <figcaption>{location}</figcaption>
+    </figure>
+  {/each}
+</section>
 
 <style>
   figure {
@@ -23,8 +27,9 @@
     flex-direction: column;
     align-items: center;
   }
-
-
+  section:nth-last-child(1){
+    padding-bottom: 15rem;
+  }
   .landscape {
   }
   .portrait {

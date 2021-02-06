@@ -59,18 +59,19 @@
   <meta name="twitter:label2" value="Reading Time" />
   <meta name="twitter:data2" value={post.printReadingTime} />
 </svelte:head>
+
 <article>
   {@html post.html}
 </article>
 
 <style>
-    /*  
+  /*  
     By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
 		In this page, Svelte can't know which elements are
 		going to appear inside the {{{post.html}}} block,
 		so we have to use the :global(...) modifier to target
-		all elements inside .content
+		all elements inside article
 	*/
   article {
     width: min(var(--page-min-width), var(--page-max-width));
@@ -80,11 +81,14 @@
     align-items: center;
   }
 
+  article :global(article:nth-child(1)) {
+    background-color: pink;
+  }
 
   article :global(pre) {
     background-color: var(--main-background-colour);
     box-shadow: inset 1px 1px 5px var(--main-border-colour);
-    padding:  var(--small-text-spacing);
+    padding: var(--small-text-spacing);
     border-radius: var(--border-radius);
     overflow-x: auto;
     background-color: transparent;

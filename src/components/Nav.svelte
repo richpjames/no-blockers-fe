@@ -36,18 +36,26 @@
     padding-right: var(--small-text-spacing);
     padding-bottom: var(--x-small-text-spacing);
     padding-left: var(--small-text-spacing);
-    opacity: 0.9;
+    opacity: 0.7;
+  }
+
+
+  ul {
+    display: flex;
   }
   @media screen and (max-width: 400px) {
     li {
       font-size: var(--text-small);
       padding: var(--x-small-text-spacing);
     }
-  }
+
 
   ul {
     display: flex;
+    justify-content: center;
   }
+  }
+
 
 
   a {

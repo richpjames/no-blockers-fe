@@ -5,10 +5,10 @@ slug: monitor-1
 excerpt: monitor is a publication platform for poetry, innovative writing and criticism based in manchester, uk. in this post i detail how i made the first two versions of their site
 ---
 
-## monitor
-
-_This is part 1 in a 2 parter on how I built a website for Monitor - a publication platform for poetry, innovative writing and criticism based in Manchester. This post details how I made the original version the website up to the point where we started selling our first product. To read the second part about how I added more products and basket functionality [click here](./blog/monitor-books-2)._
-
+## monitor part one
+<p style="opacity: 0.8; font-style: italic;">
+This is part 1 in a 2 parter on how I built a website for Monitor - a publication platform for poetry, innovative writing and criticism based in Manchester. This post details how I made the original version the website up to the point where we started selling our first product. To read the second part about how I added more products and basket functionality <a href="./blog/monitor-books-2">click here</a>.
+</p>
 ---
 
 When learning to code to begin with I found it difficult to stay motivated making sites or apps just for the sake of learning a new skill. I found what really motivated me was trying to solve real world problems and have a site live with real users really using it.

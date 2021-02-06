@@ -35,11 +35,11 @@
     align-items: center;
     padding-top: var(--x-small-component-spacing);
   }
+
   p {
     margin: 0;
     max-width: var(--max-page-width);
     padding: min(30%, var(--large-text-spacing));
-    font-size: var(--text-medium);
   }
   div {
     display: flex;
