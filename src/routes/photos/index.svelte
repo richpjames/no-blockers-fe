@@ -19,20 +19,15 @@
 
 <style>
   figure {
-    /* padding: 1rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  figcaption {
-    padding: 0 5%;
-    align-self: flex-start;
-  }
 
   .landscape {
   }
   .portrait {
-    width: min(90%, 450px);
+    width: min(var(--page-min-width), 450px);
   }
 </style>

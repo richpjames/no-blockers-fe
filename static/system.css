@@ -1,0 +1,49 @@
+:root {
+  /* Base spacing unit. */
+  --spacing-unit: 0.375em;
+
+  /* typography - colours*/
+  --main-text-colour: hsl(0, 0%, 20%);
+  --main-highlight: hsl(14, 84%, 53%);
+  --main-contrast: hsl(195, 100%, 50%);
+  --main-background-colour: hsl(0, 0%, 98%);
+  --main-border-colour: var(--main-text-colours);
+
+  /* typography - fonts */
+  --main-title-font: "Work Sans", sans-serif;
+
+  /* typography - weights */
+  --main-font-weight-heavy: 600;
+
+  /* typography - font sizes */
+  --text-small: 1.2rem;
+  --text-medium: 1.5rem;
+  --text-large: 2.8rem;
+  --text-x-large: 4rem;
+
+  /* multipliers */
+  --x-small: 1;
+  --small: 1.15;
+  --medium: 2;
+  --large: 4;
+  --x-large: 5;
+
+  /* text spacing */
+  --x-small-text-spacing: calc(var(--x-small) * var(--spacing-unit));
+  --small-text-spacing: calc(var(--small) * var(--spacing-unit));
+  --medium-text-spacing: calc(var(--medium) * var(--spacing-unit));
+  --large-text-spacing: calc(var(--large) * var(--spacing-unit));
+  --x-large-text-spacing: calc(var(--x-large) * var(--spacing-unit));
+
+  /* component spacing */
+  --x-small-component-spacing: 1rem;
+  --small-component-spacing: 2.5rem;
+  --medium-component-spacing: 5rem;
+  --large-component-spacing: 15rem;
+
+  /* border radius */
+  --border-radius: 2px;
+
+  --page-max-width: 50rem;
+  --page-min-width: 90%;
+}

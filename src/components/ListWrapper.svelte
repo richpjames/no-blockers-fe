@@ -1,15 +1,13 @@
-
-
 <ul>
-<slot></slot>
+  <slot />
 </ul>
 
 <style>
-    ul {
-	  display: flex;
-	  flex-wrap: wrap;
-	  flex-direction: column;
-	  align-items:center;
-	  
-	}
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
 </style>

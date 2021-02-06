@@ -8,8 +8,12 @@
 <nav>
   <ul>
     {#each links as link}
-      <li role="navigation" aria-label={link}>
-        <a aria-current={segment === link ? "page" : undefined} href={link}>
+      <li
+        role="navigation"
+        aria-current={segment === link ? "page" : undefined}
+        aria-label={link}
+      >
+        <a href={link}>
           {link}
         </a>
         {#if segment === link}
@@ -22,29 +26,30 @@
 
 <style>
   nav {
-    font-weight: 600;
-    padding: 0 1em;
-  }
-  @media screen and (max-width: 400px) {
-    nav {
-      padding: 0px;
-    }
-    li {
-      padding: .5em 0.25em;
-    }
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
+    font-weight: var(--main-font-weight-heavy);
   }
 
   li {
     display: block;
-    font-size: 1.2rem;
-    padding: 1em 0.5em;
+    font-size: var(--text-medium);
+    padding-top: var(--x-small-text-spacing);
+    padding-right: var(--small-text-spacing);
+    padding-bottom: var(--x-small-text-spacing);
+    padding-left: var(--small-text-spacing);
+    opacity: 0.9;
   }
+  @media screen and (max-width: 400px) {
+    li {
+      font-size: var(--text-small);
+      padding: var(--x-small-text-spacing);
+    }
+  }
+
+  ul {
+    display: flex;
+  }
+
+
   a {
     text-decoration: none;
     color: inherit;
@@ -53,7 +58,7 @@
   [aria-current] {
     position: relative;
     display: inline-block;
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .highlight-block {
@@ -64,7 +69,7 @@
     content: "";
     width: 100%;
     height: 15px;
-    background-color: deepskyblue;
+    background-color: var(--main-contrast);
     display: block;
   }
 </style>

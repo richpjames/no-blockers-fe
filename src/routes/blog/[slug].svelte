@@ -64,47 +64,34 @@
 </article>
 
 <style>
+    /*  
+    By default, CSS is locally scoped to the component,
+		and any unused styles are dead-code-eliminated.
+		In this page, Svelte can't know which elements are
+		going to appear inside the {{{post.html}}} block,
+		so we have to use the :global(...) modifier to target
+		all elements inside .content
+	*/
   article {
-    width: min(90%, 50em);
-    margin-bottom: 15rem;
+    width: min(var(--page-min-width), var(--page-max-width));
+    margin-bottom: var(--large-component-spacing);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  article :global(h2) {
-    text-align: center;
-    padding-bottom: 2.5rem;
-  }
 
-  article :global(h3) {
-    text-align: center;
-    padding-top: 2rem;
-	padding-bottom: 1.85rem;
-	margin: 0;
-  }
-  article :global(p) {
-    padding-bottom: 1rem;
-    padding-top: .85rem;
-  }
   article :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
+    background-color: var(--main-background-colour);
+    box-shadow: inset 1px 1px 5px var(--main-border-colour);
+    padding:  var(--small-text-spacing);
+    border-radius: var(--border-radius);
     overflow-x: auto;
-  }
-
-  article :global(pre) :global(code) {
     background-color: transparent;
     padding: 0;
   }
 
-  article :global(ul) {
-    line-height: 1.5;
-  }
-
   article :global(li) {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 var(--small-text-spacing) 0;
   }
 </style>

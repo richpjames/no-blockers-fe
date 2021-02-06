@@ -22,9 +22,9 @@
 
 <style>
   section {
-    width: min(90%, 50em);
+    width: min(var(--page-min-width), var(--page-max-width));
   }
   section p {
-    font-size: 26px;
+    font-size: var(--text-medium);
   }
 </style>

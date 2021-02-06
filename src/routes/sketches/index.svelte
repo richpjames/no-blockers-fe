@@ -33,13 +33,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: var(--x-small-component-spacing);
   }
   p {
     margin: 0;
-    max-width: 56em;
-    padding: min(30%, 2rem);
-    font-size: 26px;
+    max-width: var(--max-page-width);
+    padding: min(30%, var(--large-text-spacing));
+    font-size: var(--text-medium);
   }
   div {
     display: flex;

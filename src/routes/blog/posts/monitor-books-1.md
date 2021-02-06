@@ -30,7 +30,6 @@ Another facet of deploying this very basic site was the hosting, I am lucky to b
 road from me - [Zen](http://zen.co.uk) who offer a great service on hosting and domains. It was as simple as buying a domain, renting some server space and FTP-ing my files on to it and the site was live! It took seconds to deploy. This was useful as I was able to make changes for Rory to be able to see very quickly, giving me short feedback cycles and making sure we stayed on the same page.
 
 Of course we needed the ability to sell books so I used PayPal Buttons which allowed users to checkout through Paypal. This was so easy to do, the hardest part was adding custom styles to the button.
-
 I wish I had screenshots of this site, it probably didn't look great and it was never put live but I learned a lot whilst making it - things I use almost every day now. I hadn't really understood how the internet worked before, I had read a lot about it but something never really clicked. The process of uploading files from my computer, to someone elses and hitting a domain I had setup made everything click.
 
 Another thing I learned from this project was how far out estimations can be, due to lack of knowledge about everything involved something that I thought would take me 5 minutes turned out to be much more complicated than I had thought and, more rarely, something that I thought would be complicated was trivial. This is something that carries through to my work today.
@@ -50,7 +49,7 @@ Now I understand using React to build a site as small of this is perhaps overkil
 
 ### monitor 1.1
 
-![a screenshot of the monitor site in early 2020](./article_photos/monitor-v1.jpg)
+![a screenshot of the monitor site in early 2020](./article_photos/monitor-v1.jpg "monitor 1.1")
 
 A few months later Rory told me that he'd made a video for Monitor and was hoping to put them live on the site - this was a simple update. I just needed to add another page for the video and ensure people could navigate to it. My most treasured learning from this part of the project was iframes and how interesting/frustrating styling them could be. The video was hosted on Vimeo and the embed link for that was an iframe that, for a while, I bumbled about with like a child failing to make a dog out of a balloon before reaching a point that both Rory and I were satisfied with the dimensions of the video.
 

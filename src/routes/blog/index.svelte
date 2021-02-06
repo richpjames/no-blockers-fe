@@ -38,16 +38,14 @@
 
 <style>
   h3 {
-    color: #333;
+    color: var(--main-text-colour);
   }
   li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 5rem 0;
   }
   p {
-    margin: 0;
     text-justify: inter-word;
     text-align: justify;
   }
