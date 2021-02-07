@@ -28,18 +28,43 @@
   /* typography - font sizes */
 
   /* title */
-  --text-title-small: calc(var(--xl-small) * var(--spacing-unit));
-  --text-title-medium: calc(var(--base) * var(--spacing-unit));
-  --text-title-large: calc(var(--xs-medium) * var(--spacing-unit));
-  --text-title-x-large: calc(var(--s-medium) * var(--spacing-unit));
+  --text-title-small: calc(var(--title-medium) * var(--spacing-unit));
+  --text-title-medium: calc(var(--title-large) * var(--spacing-unit));
+  --text-title-large: var(--title-x-large);
+  --text-title-x-large: calc(var(--title-xx-large) * var(--spacing-unit));
 
   /* body */
-  --text-body-small: calc(var(--xl-small) * var(--spacing-unit));
-  --text-body-medium: calc(var(--base) * var(--spacing-unit));
-  --text-body-large: calc(var(--xs-medium) * var(--spacing-unit));
-  --text-body-x-large: calc(var(--s-medium) * var(--spacing-unit));
+  --text-body-small: calc(var(--body-xx-small) * var(--spacing-unit));
+  --text-body-small-medium: calc(var(--body-x-small)* var(--spacing-unit));
+  --text-body-medium-small: var(--spacing-unit);
+  --text-body-medium: calc(var(--body-small) * var(--spacing-unit));
+  --text-body-large: calc(var(--body-small-medium) * var(--spacing-unit));
+  --text-body-x-large: calc(var(--body-medium) * var(--spacing-unit));
+
+  /*   */
 
   /* multipliers */
+  
+  /* title */
+  --title-medium: 1.875;
+  --title-large: 2.25;
+  --title-x-large: 3;
+  --title-xx-large: 3.75
+  
+  /* body */
+  --body-xx-small: 0.75;
+  --body-x-small: 0.875;
+  --body-small: 1.125;
+  --body-s-medium: 1.25;
+  --body-medium: 1.5;
+  --body-l-medium: 1.875;
+  --body-large: 1.25;
+  --body-x-large: 3;
+  --body-xx-large: 3.75;
+
+
+
+  /* spacing */
   --xx-small: 0.25;
   --x-small: 0.5;
   --small: 0.75;
@@ -76,6 +101,6 @@
   /* opacity */
   --medium-opacity: 0.7;
 
-  --page-max-width: calc(var(--xxx-large) * var(--spacing-unit));
+  --page-max-width: calc(var(--xx-large) * var(--spacing-unit));
   --page-min-width: 90%;
 }
