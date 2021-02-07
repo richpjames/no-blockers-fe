@@ -16,7 +16,7 @@
   --main-highlight: hsl(14, 84%, 53%);
   --main-contrast: hsl(195, 100%, 50%);
   --main-background-colour: hsl(0, 0%, 98%);
-  --main-border-colour: var(--main-text-colours);
+  --main-border-colour: var(--main-text-colour);
 
   /* typography - fonts */
   --main-title-font: "Work Sans", sans-serif;
@@ -28,29 +28,27 @@
   /* typography - font sizes */
 
   /* title */
-  --text-title-small: calc(var(--title-medium) * var(--spacing-unit));
-  --text-title-medium: calc(var(--title-large) * var(--spacing-unit));
-  --text-title-large: var(--title-x-large);
-  --text-title-x-large: calc(var(--title-xx-large) * var(--spacing-unit));
+  --h4-size: calc(var(--title-medium) * var(--spacing-unit));
+  --h3-size: calc(var(--title-large) * var(--spacing-unit));
+  --h2-size: calc(var(--title-large) * var(--spacing-unit));
+  --h1-size: calc(var(--title-xx-large) * var(--spacing-unit));
 
   /* body */
   --text-body-small: calc(var(--body-xx-small) * var(--spacing-unit));
-  --text-body-small-medium: calc(var(--body-x-small)* var(--spacing-unit));
+  --text-body-s-medium: calc(var(--body-x-small) * var(--spacing-unit));
   --text-body-medium-small: var(--spacing-unit);
   --text-body-medium: calc(var(--body-small) * var(--spacing-unit));
-  --text-body-large: calc(var(--body-small-medium) * var(--spacing-unit));
+  --text-body-large: calc(var(--body-s-medium) * var(--spacing-unit));
   --text-body-x-large: calc(var(--body-medium) * var(--spacing-unit));
 
-  /*   */
-
   /* multipliers */
-  
+
   /* title */
   --title-medium: 1.875;
   --title-large: 2.25;
   --title-x-large: 3;
-  --title-xx-large: 3.75
-  
+  --title-xx-large: 3.75;
+
   /* body */
   --body-xx-small: 0.75;
   --body-x-small: 0.875;
@@ -61,8 +59,6 @@
   --body-large: 1.25;
   --body-x-large: 3;
   --body-xx-large: 3.75;
-
-
 
   /* spacing */
   --xx-small: 0.25;
@@ -93,7 +89,7 @@
   --x-small-component-spacing: calc(var(--base) * var(--spacing-unit));
   --small-component-spacing: calc(var(--xs-medium) * var(--spacing-unit));
   --medium-component-spacing: calc(var(--medium) * var(--spacing-unit));
-  --large-component-spacing: calc(var(--s-small) * var(--spacing-unit));
+  --large-component-spacing: calc(var(--small) * var(--spacing-unit));
 
   /* border radius */
   --border-radius: 2px;
