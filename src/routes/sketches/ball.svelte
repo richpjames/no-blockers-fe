@@ -1,98 +1,132 @@
-<script >
-  import { fade } from 'svelte/transition';
+<script>
+  let colour1 = `--pink`;
+  let colour2 = "--cyan";
+  let colour3 = "--deep-cyan";
+  let colour4 = "--orange";
+  let colour5 = "--peach";
+  const colours = [colour1, colour2, colour3, colour4, colour5];
 
-  let y
-  let layers = ["1", "2", "3", "5", "4", "6", "7"]
+  let y;
+  $: number1 = `background-color: var(${colours[0]});`;
+  $: number2 = `background-color: var(${colours[1]});`;
+  $: number3 = `background-color: var(${colours[2]});`;
+  $: number4 = `background-color: var(${colours[3]});`;
+  $: number5 = `background-color: var(${colours[4]});`;
+  $: lastCircleYPos = 0;
+  $: circleFriendlyY = 0;
+  let layers = ["1", "2", "3", "5", "4", "6", "7"];
+  $: css = `transform: translateY(${y * 2}px);`;
+  const onClick = (e) => {
+    circleFriendlyY = Math.floor(y / 100);
+    if (circleFriendlyY !== lastCircleYPos) {
+      lastCircleYPos = circleFriendlyY;
+      const keepMeToo = colours.shift();
+      colours.push(keepMeToo);
+    } else if (circleFriendlyY > lastCircleYPos) {
+      lastCircleYPos = circleFriendlyY;
+      const keepMeToo = colours.pop();
+      colours.unshift(keepMeToo);
+    }
+    if (e.SCROLL_PAGE_DOWN > 3) {
+      css = "";
+    }
+    number1 = `background-color: var(${colours[0]});`;
+    number2 = `background-color: var(${colours[1]});`;
+    number3 = `background-color: var(${colours[2]});`;
+    number4 = `background-color: var(${colours[3]});`;
+    number5 = `background-color: var(${colours[4]});`;
+  };
 </script>
 
-<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y} on:scroll={onClick} />
 
 <svelte:head>
-	<title>Ball</title>
+  <title>sketches: ball</title>
 </svelte:head>
 
-<div class="container" transition:fade>
+<h2>ball</h2>
+
+<p>this is my first go at triggering changes to css using scroll</p>
+
+<div class="container">
   {#each layers as layer, i}
-  <div class="layer-one" style={`margin-top: ${i === 0 ? "5rem" : "0"}`}>
-    <div class="part-one cyan"></div>
-    <div class="part-two cyan" style="margin-left: {y / 20 + 9 / (i + 1)}%"></div>
-  </div>
-  <div class="layer">    
-    <div class="part-one brown"></div>
-    <div class="part-two brown" style="margin-left: {y / 20 + 8 / (i + 1)}%"></div>
-  </div>
-  <div class="layer">    
-    <div class="part-one peach"></div>
-    <div class="part-two peach" style="margin-left: {y / 20 + 7 / (i + 1)}%"></div>
-  </div>
-  <div class="layer">    
-    <div class="part-one greyn"></div>
-    <div class="part-two greyn" style="margin-left: {y / 20  + 6 / (i + 1)}%"></div>
-  </div>
-  <div class="layer">    
-    <div class="part-one deepskyblue"></div>
-    <div class="part-two deepskyblue" style="margin-left: {y / 20 + 6 / (i + 1)}%"></div>
-  </div>
+    <div class="layer-one" style="margin-top: {i === 0 ? '5rem' : '0'}">
+      <div class="part-one" style={`${number1};`} />
+      <div
+        class="part-two"
+        style="margin-left: {y / 20 + 9 / (i + 1)}%; {number1};"
+      />
+    </div>
+    <div class="layer">
+      <div class="part-one" style={`${number2};`} />
+      <div
+        class="part-two"
+        style="margin-left: {y / 20 + 8 / (i + 1)}%; {number2};"
+      />
+    </div>
+    <div class="layer">
+      <div class="part-one " style={`${number3};`} />
+      <div
+        class="part-two "
+        style="margin-left: {y / 20 + 7 / (i + 1)}%; {number3};"
+      />
+    </div>
+    <div class="layer">
+      <div class="part-one" style={`${number4};`} />
+      <div
+        class="part-two "
+        style="margin-left: {y / 20 + 6 / (i + 1)}%; {number4};"
+      />
+    </div>
+    <div class="layer">
+      <div class="part-one" style={`${number5};`} />
+      <div
+        class="part-two "
+        style="margin-left: {y / 20 + 6 / (i + 1)}%; {number5};"
+      />
+    </div>
   {/each}
-    <div class="circle" style="transform: translateY({y * 2}px);"></div>
+  <div class="circle" style={css} />
   <div class="layer dark-brown" />
 </div>
 
 <style>
-
- .container {
-  width: 100%;
-  height: 100rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.circle {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 100%;
-  background-color: deeppink;
-  margin-bottom: 10rem;
-  position: absolute;
-}
-.cyan {
-    background-color: #00ffcd;
-}
-.brown {
-    background-color: #ec4e20;
-}
-.dark-brown{
-  background-color:#83270b ;
-}
-.peach{
-  background-color: #ff9505;
-}
-.greyn{
-  background-color: #00a6a6;
-}
-
-.deepskyblue{
-  background-color: deepskyblue;
-}
-.layer-one {
-  height: 3.5rem;
-  display: flex;
-  width: 100%;
-}
-.part-one {
-  width: 100%;
-  border-top-right-radius: 5rem;
+  .container {
+    width: 100%;
+    max-height: 100rem;
+    padding-top: var(--medium-component-spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-.part-two {
-  width: 100%;
-  border-top-left-radius: 5rem;
-  margin-left: auto;
-}
-.layer{
-  height: 3.5rem;
-  display: flex;
-  width: 100%;
-}
-
-
+  .circle {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    background-color: deeppink;
+    margin-bottom: 10rem;
+    position: absolute;
+  }
+  .dark-brown {
+    background-color: #83270b;
+  }
+  .layer-one {
+    height: 3.5rem;
+    display: flex;
+    width: 100%;
+  }
+  .part-one {
+    width: 100%;
+    border-top-right-radius: 5rem;
+  }
+  .part-two {
+    width: 100%;
+    border-top-left-radius: 5rem;
+    margin-left: auto;
+  }
+  .layer {
+    height: 3.5rem;
+    display: flex;
+    width: 100%;
+  }
 </style>
