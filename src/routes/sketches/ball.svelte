@@ -15,7 +15,7 @@
   $: lastCircleYPos = 0;
   $: circleFriendlyY = 0;
   let layers = ["1", "2", "3", "5", "4", "6", "7"];
-  $: css = `transform: translateY(${y * 2}px);`;
+  $: circleTransform = `transform: translateY(${y * 1.6}px);`;
   const onClick = (e) => {
     circleFriendlyY = Math.floor(y / 100);
     if (circleFriendlyY !== lastCircleYPos) {
@@ -27,8 +27,11 @@
       const keepMeToo = colours.pop();
       colours.unshift(keepMeToo);
     }
-    if (e.SCROLL_PAGE_DOWN > 3) {
-      css = "";
+    console.log(e.SCROLL_PAGE_DOWN);
+
+    if (e.SCROLL_PAGE_DOWN > 3000) {
+      console.log(e.SCROLL_PAGE_DOWN);
+      circleTransform = "";
     }
     number1 = `background-color: var(${colours[0]});`;
     number2 = `background-color: var(${colours[1]});`;
@@ -86,7 +89,7 @@
       />
     </div>
   {/each}
-  <div class="circle" style={css} />
+  <div class="circle" style={circleTransform} />
   <div class="layer dark-brown" />
 </div>
 
