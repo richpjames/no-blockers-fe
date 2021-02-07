@@ -20,7 +20,7 @@
 </svelte:head>
 
 <PageWrapper>
-  <h1>blog</h1>
+  <h2>blog</h2>
 
   <ListWrapper>
     {#each posts as post}
@@ -44,6 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: var(--x-small-component-spacing);
   }
   p {
     text-justify: inter-word;

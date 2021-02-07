@@ -1,8 +1,7 @@
 <script>
   import ListWrapper from "../../components/ListWrapper.svelte";
-  import PageWrapper from "../../components/PageWrapper.svelte";
-
   const sketches = [{ name: "ball", imagePath: "ball.jpg" }];
+
 </script>
 
 <svelte:head>
@@ -10,7 +9,7 @@
 </svelte:head>
 
 <div>
-  <h1>sketches</h1>
+  <h3>sketches</h3>
 
   <p>these are ideas i'm using to improve my css and have fun</p>
 
@@ -26,6 +25,9 @@
 </div>
 
 <style>
+   h3 {
+    color: var(--main-text-colour);
+  }
   img {
     width: min(600px, 95%);
   }

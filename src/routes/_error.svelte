@@ -20,7 +20,7 @@
 
 	@media (min-width: 480px) {
 		h1 {
-			font-size: var(--text-xx-large);
+			font-size: var(--text-title-large);
 		}
 	}
 </style>

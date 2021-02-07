@@ -26,17 +26,17 @@
 
 <style>
   nav {
-    font-weight: var(--main-font-weight-heavy);
+    font-weight: var(--font-weight-heavy);
   }
 
   li {
     display: block;
-    font-size: var(--text-medium);
+    font-size: var(--text-title-small);
     padding-top: var(--x-small-text-spacing);
-    padding-right: var(--small-text-spacing);
+    padding-right: var(--x-small-text-spacing);
     padding-bottom: var(--x-small-text-spacing);
-    padding-left: var(--small-text-spacing);
-    opacity: 0.7;
+    padding-left: var(--x-small-text-spacing);
+    opacity: var(--medium-opacity);
   }
 
 
@@ -45,7 +45,7 @@
   }
   @media screen and (max-width: 400px) {
     li {
-      font-size: var(--text-small);
+      font-size: var(--text-body-small);
       padding: var(--x-small-text-spacing);
     }
 

@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: var(--text-small);
+  font-size: var(--text-body-small);
   line-height: 1.5;
   color: var(--main-text-colour);
 }
@@ -14,37 +14,42 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   line-height: 1.2;
   text-align: center;
   padding: var(--medium-text-spacing) 0;
   font-family: var(--main-title-font);
 }
 p {
-  font-size: var(--text-small);
+  font-size: var(--text-body-medium-small);
+  padding: var(--small-text-spacing);
   margin: 0;
 }
 nav {
   font-family: var(--main-title-font);
-  font-weight: 600;
+  font-weight: var(--font-weight-heavy);
 }
 
 h1 {
-  font-size: var(--text-large);
+  font-size: var(--text-title-x-large);
   margin: 0;
-  font-weight: var(--main-font-weight-heavy);
+  font-weight: var(--font-weight-heavy);
+  padding: var(--x-large-text-spacing) 0;
 }
 
 h2 {
-  font-size: 2.25em;
+  font-size: var(--text-title-large);
+  font-weight: var(--font-weight-heavy);
+  padding: var(--large-text-spacing) 0;
+  color: var(--main-lighter-text-colour);
 }
 
 h3 {
-  font-size: 1.85em;
-  font-weight: 600;
-  padding-top: var(--medium-text-spacing);
-  padding-bottom: var(--medium-text-spacing);
+  font-size: var(--text-title-medium);
+  font-weight: var(--font-weight-heavy);
+  padding: var(--medium-text-spacing) 0;
 }
+
 a {
   color: var(--main-highlight);
 }

@@ -1,9 +1,18 @@
 :root {
+  /* colours */
+  --pink: hsl(328, 100%, 54%);
+  --cyan: hsl(168, 100%, 50%);
+  --deep-cyan: hsl(180, 100%, 33%);
+  --orange: hsl(14, 84%, 53%);
+  --peach: hsl(35, 100%, 51%);
+  --brown: hsl(14, 85%, 28%);
+
   /* Base spacing unit. */
-  --spacing-unit: 0.375em;
+  --spacing-unit: 16px;
 
   /* typography - colours*/
-  --main-text-colour: hsl(0, 0%, 20%);
+  --main-text-colour: hsl(0, 0%, 17.5%);
+  --main-lighter-text-colour: hsl(0, 0%, 25%);
   --main-highlight: hsl(14, 84%, 53%);
   --main-contrast: hsl(195, 100%, 50%);
   --main-background-colour: hsl(0, 0%, 98%);
@@ -13,37 +22,60 @@
   --main-title-font: "Work Sans", sans-serif;
 
   /* typography - weights */
-  --main-font-weight-heavy: 600;
+  --font-weight-regular: 400;
+  --font-weight-heavy: 600;
 
   /* typography - font sizes */
-  --text-small: 1.2rem;
-  --text-medium: 1.5rem;
-  --text-large: 2.8rem;
-  --text-x-large: 4rem;
+
+  /* title */
+  --text-title-small: calc(var(--xl-small) * var(--spacing-unit));
+  --text-title-medium: calc(var(--base) * var(--spacing-unit));
+  --text-title-large: calc(var(--xs-medium) * var(--spacing-unit));
+  --text-title-x-large: calc(var(--s-medium) * var(--spacing-unit));
+
+  /* body */
+  --text-body-small: calc(var(--xl-small) * var(--spacing-unit));
+  --text-body-medium: calc(var(--base) * var(--spacing-unit));
+  --text-body-large: calc(var(--xs-medium) * var(--spacing-unit));
+  --text-body-x-large: calc(var(--s-medium) * var(--spacing-unit));
 
   /* multipliers */
-  --x-small: 1;
-  --small: 1.15;
-  --medium: 2;
-  --large: 4;
-  --x-large: 5;
+  --xx-small: 0.25;
+  --x-small: 0.5;
+  --small: 0.75;
+  --l-small: 1;
+  --xl-small: 1.5;
+  --base: 2;
+  --xs-medium: 3;
+  --s-medium: 4;
+  --medium: 6;
+  --l-medium: 9;
+  --xl-medium: 12;
+  --s-large: 16;
+  --m-large: 24;
+  --x-large: 32;
+  --xx-large: 40;
+  --xxx-large: 48;
 
   /* text spacing */
   --x-small-text-spacing: calc(var(--x-small) * var(--spacing-unit));
   --small-text-spacing: calc(var(--small) * var(--spacing-unit));
-  --medium-text-spacing: calc(var(--medium) * var(--spacing-unit));
-  --large-text-spacing: calc(var(--large) * var(--spacing-unit));
-  --x-large-text-spacing: calc(var(--x-large) * var(--spacing-unit));
+  --medium-text-spacing: calc(var(--l-small) * var(--spacing-unit));
+  --large-text-spacing: calc(var(--xl-small) * var(--spacing-unit));
+  --x-large-text-spacing: calc(var(--base) * var(--spacing-unit));
 
   /* component spacing */
-  --x-small-component-spacing: 1rem;
-  --small-component-spacing: 2.5rem;
-  --medium-component-spacing: 5rem;
-  --large-component-spacing: 15rem;
+  --x-small-component-spacing: calc(var(--base) * var(--spacing-unit));
+  --small-component-spacing: calc(var(--xs-medium) * var(--spacing-unit));
+  --medium-component-spacing: calc(var(--medium) * var(--spacing-unit));
+  --large-component-spacing: calc(var(--s-small) * var(--spacing-unit));
 
   /* border radius */
   --border-radius: 2px;
 
-  --page-max-width: 50rem;
+  /* opacity */
+  --medium-opacity: 0.7;
+
+  --page-max-width: calc(var(--xxx-large) * var(--spacing-unit));
   --page-min-width: 90%;
 }
