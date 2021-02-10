@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: var(--text-body-small);
+  font-size: var(--font-body-small);
   line-height: 1.5;
   color: var(--main-text-colour);
 }
@@ -21,7 +21,7 @@ h6 {
   font-family: var(--main-title-font);
 }
 p {
-  font-size: var(--text-body-medium);
+  font-size: var(--font-body-medium);
   padding: var(--small-text-spacing);
   margin: 0;
 }
@@ -31,27 +31,27 @@ nav {
 }
 
 h1 {
-  font-size: var(--h1-size);
+  font-size: var(--font-title-x-large);
   margin: 0;
   font-weight: var(--font-weight-heavy);
   padding: var(--x-large-text-spacing) 0;
 }
 
 h2 {
-  font-size: var(--h2-size);
+  font-size: var(--font-title-large);
   font-weight: var(--font-weight-heavy);
   padding: var(--large-text-spacing) 0;
   color: var(--main-lighter-text-colour);
 }
 
 h3 {
-  font-size: var(--h3-size);
+  font-size: var(--font-title-medium);
   font-weight: var(--font-weight-heavy);
   padding: var(--medium-text-spacing) 0;
 }
 
 h4 {
-  font-size: var(--h4-size);
+  font-size: var(--font-title-small);
   font-weight: var(--font-weight-heavy);
   padding: var(--medium-text-spacing) 0;
 }

@@ -2,8 +2,6 @@
   import { photos, imageUrl } from "./photos.json";
 </script>
 
-<h1>photos</h1>
-
 <section>
   {#each photos as { path, alt, orientation, location }}
     <figure

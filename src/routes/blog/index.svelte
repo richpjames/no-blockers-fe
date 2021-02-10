@@ -20,7 +20,6 @@
 </svelte:head>
 
 <PageWrapper>
-  <h1>blog</h1>
 
   <ListWrapper>
     {#each posts as post}

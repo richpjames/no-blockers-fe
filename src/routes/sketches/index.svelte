@@ -9,7 +9,6 @@
 </svelte:head>
 
 <div>
-  <h1>sketches</h1>
 
   <p>these are ideas i'm using to improve my css and have fun</p>
 
@@ -48,5 +47,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    padding-top: var(--medium-component-spacing);
+
   }
 </style>

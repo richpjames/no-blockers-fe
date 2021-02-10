@@ -10,10 +10,10 @@
   <h1>about</h1>
 
   <section>
-    <p>
+    <!-- <p>
       I've been obsessed with the internet since the 90s and, since 2019, have
       been working as a web developer.
-    </p>
+    </p> -->
     <p>
       On this site you'll find thoughts I'm having on the or projects i'm
       working on in the <a href="/blog">blog</a>

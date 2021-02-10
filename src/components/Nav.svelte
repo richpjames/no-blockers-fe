@@ -31,7 +31,7 @@
 
   li {
     display: block;
-    font-size: var(--text-title-small);
+    font-size: var(--font-title-x-small);
     padding-top: var(--x-small-text-spacing);
     padding-right: var(--x-small-text-spacing);
     padding-bottom: var(--x-small-text-spacing);
@@ -45,7 +45,7 @@
   }
   @media screen and (max-width: 400px) {
     li {
-      font-size: var(--text-body-small);
+      font-size: var(--font-title-small);
       padding: var(--x-small-text-spacing);
     }
 
